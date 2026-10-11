@@ -1,0 +1,7 @@
+sky_apk_dump/
+*.apk
+*.zip
+.DS_Store
+*.swp
+*~
+*.log

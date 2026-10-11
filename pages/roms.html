@@ -1,0 +1,44 @@
+<h1>Flashing Custom ROMs</h1>
+<p>With TWRP installed, you are ready to flash a new Android experience.</p>
+
+<div class="alert">
+    <div class="alert-title">
+        Pre-installation Check
+    </div>
+    <div class="alert-desc">
+        Make sure you are on the correct firmware version (Android 10/11 MIUI base) required by the Custom ROM before proceeding. Flashing on the wrong firmware can result in a bootloop.
+    </div>
+</div>
+
+<h2>Wiping Partitions</h2>
+<p>Before installing a new ROM, you must format your current system to ensure a clean slate.</p>
+<ol>
+    <li>Boot into TWRP Recovery (Hold Volume Up + Power).</li>
+    <li>Go to <strong>Wipe</strong> > <strong>Advanced Wipe</strong>.</li>
+    <li>Select the following partitions:
+        <ul>
+            <li>Dalvik / ART Cache</li>
+            <li>System</li>
+            <li>Data</li>
+            <li>Cache</li>
+        </ul>
+    </li>
+    <li>Swipe to Wipe.</li>
+</ol>
+
+<h2>Installing the ROM</h2>
+<p>Now, flash the ROM zip file.</p>
+<ol>
+    <li>Go back to the TWRP home menu.</li>
+    <li>Select <strong>Install</strong>.</li>
+    <li>Navigate to the folder where you placed the Custom ROM <code>.zip</code> file.</li>
+    <li>Select the file and <strong>Swipe to confirm Flash</strong>.</li>
+    <li>(Optional) If the ROM does not include GApps (Google Apps), flash the GApps zip immediately after the ROM.</li>
+</ol>
+
+<h2>Format Data</h2>
+<p>This is a crucial step for Begonia to prevent encryption issues.</p>
+<pre><code>1. Go to TWRP Home > Wipe > Format Data
+2. Type "yes" and confirm.</code></pre>
+
+<p>Finally, go to <strong>Reboot</strong> > <strong>System</strong>. The first boot may take 5-10 minutes. Be patient!</p>

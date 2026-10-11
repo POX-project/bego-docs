@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Begonia Docs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+
+        <!-- Main Workspace -->
+        <div class="workspace">
+            <!-- Left Sidebar -->
+            <aside class="left-sidebar" id="left-sidebar">
+
+
+                <div class="sidebar-search-container">
+                    <div class="sidebar-search">
+                        <i data-lucide="search" class="icon-sm"></i>
+                        <input type="text" id="sidebar-search-input" placeholder="Search..." aria-label="Search" readonly>
+                    </div>
+                </div>
+
+                <div class="sidebar-nav">
+                    <a href="#intro" class="sidebar-link">
+                        <i data-lucide="book-open" class="icon-sm"></i> Introduction
+                    </a>
+                </div>
+
+                <div id="sidebar-dynamic-sections">
+                    <!-- Populated by JS -->
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="main-content-area">
+                <div class="content-header">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <button id="sidebar-toggle-btn" class="icon-btn" aria-label="Toggle Sidebar">
+                            <i data-lucide="menu" class="icon-md"></i>
+                        </button>
+                        <div class="breadcrumbs" id="breadcrumbs">
+                            <i data-lucide="book-open" class="icon-sm"></i> <span style="margin-left: 6px;">Introduction</span>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; gap: 16px;">
+                        <div style="font-size: 13px; color: hsl(var(--muted-foreground)); display: flex; align-items: center;">
+                            <i data-lucide="eye" class="icon-sm" style="margin-right: 6px;"></i> 
+                            <span id="visit-count" style="font-weight: 500; color: hsl(var(--foreground));">0</span>&nbsp; views
+                        </div>
+                        <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                            <!-- Icon injected by JS -->
+                        </button>
+                    </div>
+                </div>
+                <div class="content-body" id="content-area">
+                    <div class="loader">Loading...</div>
+                </div>
+                
+                <div class="mobile-bottom-search">
+                    <div class="sidebar-search">
+                        <i data-lucide="search" class="icon-sm"></i>
+                        <input type="text" id="mobile-search-input" placeholder="Search guides..." aria-label="Search" readonly>
+                    </div>
+                </div>
+            </main>
+
+        </div>
+    </div>
+    <!-- Search Modal -->
+    <div id="search-modal" class="search-modal hidden">
+        <div class="search-modal-backdrop" id="search-modal-backdrop"></div>
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search" class="icon-md"></i>
+                <input type="text" id="modal-search-input" placeholder="Search documentation..." autocomplete="off">
+                <button id="close-search-modal" class="icon-btn" aria-label="Close search"><i data-lucide="x" class="icon-md"></i></button>
+            </div>
+            <div class="search-modal-results" id="search-results-container">
+                <!-- Results injected here -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>

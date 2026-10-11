@@ -1,0 +1,40 @@
+<h1>Unlock Bootloader & Install TWRP</h1>
+<p>Follow these steps carefully to unlock your bootloader and flash the Team Win Recovery Project (TWRP).</p>
+
+<div class="alert destructive">
+    <div class="alert-title">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.49991 0.876892C7.7208 0.876892 7.91745 1.00908 8.00685 1.21731L14.3941 16.0827C14.4988 16.3262 14.4093 16.609 14.184 16.7441C13.9587 16.8791 13.6661 16.8291 13.498 16.6263L7.49991 9.38718L1.50186 16.6263C1.33373 16.8291 1.04107 16.8791 0.815809 16.7441C0.590543 16.609 0.501062 16.3262 0.605706 16.0827L6.99298 1.21731C7.08237 1.00908 7.27902 0.876892 7.49991 0.876892ZM7.49991 11.25C7.91412 11.25 8.24991 10.9142 8.24991 10.5C8.24991 10.0858 7.91412 9.75 7.49991 9.75C7.0857 9.75 6.74991 10.0858 6.74991 10.5C6.74991 10.9142 7.0857 11.25 7.49991 11.25Z" fill="currentColor"></path></svg>
+        Data Wiping Warning
+    </div>
+    <div class="alert-desc">
+        Unlocking the bootloader will completely erase all data on your device. Ensure you have backed up all important photos, contacts, and messages.
+    </div>
+</div>
+
+<h2>1. Unlocking the Bootloader</h2>
+<ol>
+    <li>Enable Developer Options by tapping "MIUI Version" in Settings > About Phone 7 times.</li>
+    <li>Go to Additional Settings > Developer Options and enable <strong>OEM Unlocking</strong> and <strong>USB Debugging</strong>.</li>
+    <li>Bind your Xiaomi account in <strong>Mi Unlock Status</strong>.</li>
+    <li>Download the official <a href="#" style="text-decoration:underline;">Mi Unlock Tool</a> on your PC.</li>
+    <li>Boot your phone into Fastboot mode (Volume Down + Power).</li>
+    <li>Connect your phone to the PC and run the Mi Unlock Tool. Follow the on-screen instructions.</li>
+</ol>
+
+<h2>2. Flashing TWRP</h2>
+<p>Once your bootloader is unlocked, you can flash a custom recovery.</p>
+
+<h3>Required Files</h3>
+<ul>
+    <li>The latest TWRP or CFW recovery image for Begonia (e.g., <code>recovery.img</code>).</li>
+    <li><a href="#" style="text-decoration:underline;">Begonia Vbmeta image</a> (required to bypass verified boot).</li>
+</ul>
+
+<h3>Fastboot Commands</h3>
+<p>Open a command prompt in your Platform Tools folder and execute the following commands:</p>
+
+<pre><code>fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img
+fastboot flash recovery recovery.img
+fastboot boot recovery.img</code></pre>
+
+<p>Your phone should now boot directly into TWRP.</p>

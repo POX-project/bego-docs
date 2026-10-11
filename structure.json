@@ -1,0 +1,417 @@
+{
+    "categories": [
+        {
+            "id": "tools",
+            "title": "Tools",
+            "icon": "tool",
+            "pages": [
+                {
+                    "id": "android_tools",
+                    "path": "tools/android_tools",
+                    "title": "Android Tools",
+                    "icon": "cpu",
+                    "desc": "Installation guides for essential Android tools and drivers."
+                }
+            ]
+        },
+        {
+            "id": "files",
+            "title": "Files",
+            "icon": "folder",
+            "pages": [
+                {
+                    "id": "rom_mirror",
+                    "path": "files/rom_mirror",
+                    "title": "ROM Mirror",
+                    "icon": "copy",
+                    "desc": "Download links for custom ROMs, perfectly suited for daily driving."
+                },
+                {
+                    "id": "rom_store",
+                    "path": "files/rom_store",
+                    "title": "ROMs Store",
+                    "icon": "shopping-bag",
+                    "desc": "A comprehensive list of all popular custom ROMs available for Begonia."
+                },
+                {
+                    "id": "brp_twrp",
+                    "path": "files/brp_twrp",
+                    "title": "BRP TWRP",
+                    "icon": "refresh-cw",
+                    "desc": "Advanced custom recovery for flashing dynamic partitions and testing builds."
+                },
+                {
+                    "id": "kernel",
+                    "path": "files/kernel",
+                    "title": "Kernel Guide",
+                    "icon": "settings",
+                    "desc": "Information on custom kernels, source compilation, and optimizations."
+                },
+                {
+                    "id": "twrp_dynamic",
+                    "path": "files/twrp_dynamic",
+                    "title": "TWRP (Dynamic)",
+                    "icon": "refresh-cw",
+                    "desc": "Official-style TWRP modified for dynamic partitions."
+                },
+                {
+                    "id": "non-dynamic_recovery-a11",
+                    "path": "files/non-dynamic_recovery-a11",
+                    "title": "Recovery (Non-Dynamic A11)",
+                    "icon": "download",
+                    "desc": "Standard recovery for Android 11 base."
+                },
+                {
+                    "id": "non-dynamic_recovery-a12",
+                    "path": "files/non-dynamic_recovery-a12",
+                    "title": "Recovery (Non-Dynamic A12)",
+                    "icon": "download",
+                    "desc": "Standard recovery for Android 12 base."
+                }
+            ]
+        },
+        {
+            "id": "guides",
+            "title": "Guides",
+            "icon": "book-open",
+            "pages": [
+                {
+                    "id": "newbie_guide",
+                    "path": "guides/newbie_guide",
+                    "title": "Newbie Guide",
+                    "icon": "book",
+                    "desc": "Start here! A comprehensive introduction to modding concepts for beginners."
+                },
+                {
+                    "id": "unlock-bootloader",
+                    "path": "guides/unlock-bootloader",
+                    "title": "Unlock Bootloader",
+                    "icon": "unlock",
+                    "desc": "Step-by-step instructions on how to unlock the bootloader of your device."
+                },
+                {
+                    "id": "lmc8-4",
+                    "path": "guides/lmc8-4",
+                    "title": "GCam (LMC 8.4)",
+                    "icon": "camera",
+                    "desc": "Enhance your photography with the best Google Camera port for Begonia."
+                },
+                {
+                    "id": "dynamic_partition",
+                    "path": "guides/dynamic_partition",
+                    "title": "Dynamic Partitions",
+                    "icon": "layers",
+                    "desc": "Technical overview of how dynamic partitions are structured on Begonia."
+                },
+                {
+                    "id": "porter",
+                    "path": "guides/porter",
+                    "title": "Porter Guide",
+                    "icon": "wrench",
+                    "desc": "Learn how to port GSIs and device trees to the Begonia platform."
+                },
+                {
+                    "id": "audio_optimize_bass_boost",
+                    "path": "guides/audio_optimize_bass_boost",
+                    "title": "Audio Optimize & Bass Boost",
+                    "icon": "headphones",
+                    "desc": "Enhance audio quality and bass response."
+                },
+                {
+                    "id": "dexpot",
+                    "path": "guides/dexpot",
+                    "title": "DexPot",
+                    "icon": "package",
+                    "desc": "Information and usage guide for DexPot."
+                },
+                {
+                    "id": "dynamic_cleanflash",
+                    "path": "guides/dynamic_cleanflash",
+                    "title": "Dynamic Clean Flash",
+                    "icon": "zap",
+                    "desc": "Properly clean flash a dynamic ROM without bricks."
+                },
+                {
+                    "id": "fast_charging_module",
+                    "path": "guides/fast_charging_module",
+                    "title": "Fast Charging Module",
+                    "icon": "battery-charging",
+                    "desc": "Magisk module to bypass charging limits."
+                },
+                {
+                    "id": "fix_restricted_setting",
+                    "path": "guides/fix_restricted_setting",
+                    "title": "Fix Restricted Settings",
+                    "icon": "unlock",
+                    "desc": "How to bypass MIUI/HyperOS restricted settings warning."
+                },
+                {
+                    "id": "gamers_extreme",
+                    "path": "guides/gamers_extreme",
+                    "title": "Gamers Extreme",
+                    "icon": "crosshair",
+                    "desc": "Extreme performance tuning for heavy gaming."
+                },
+                {
+                    "id": "hyperos_glass_blur",
+                    "path": "guides/hyperos_glass_blur",
+                    "title": "HyperOS Glass Blur",
+                    "icon": "layers",
+                    "desc": "Enable high-quality glass blur effects on HyperOS."
+                },
+                {
+                    "id": "hyperos_securityapp_reboot_issue_fix",
+                    "path": "guides/hyperos_securityapp_reboot_issue_fix",
+                    "title": "HyperOS Reboot Fix",
+                    "icon": "shield-alert",
+                    "desc": "Fix random reboots caused by the HyperOS Security App."
+                },
+                {
+                    "id": "idle-optimizer",
+                    "path": "guides/idle-optimizer",
+                    "title": "Idle Optimizer",
+                    "icon": "moon",
+                    "desc": "Reduce battery drain while the device is sleeping."
+                },
+                {
+                    "id": "imei-backup",
+                    "path": "guides/imei-backup",
+                    "title": "IMEI Backup Guide",
+                    "icon": "save",
+                    "desc": "Crucial steps to backup NVRAM/NVDATA on MediaTek."
+                },
+                {
+                    "id": "improve_screen_saturation",
+                    "path": "guides/improve_screen_saturation",
+                    "title": "Improve Screen Saturation",
+                    "icon": "monitor",
+                    "desc": "Make the Begonia IPS display pop with vivid colors."
+                },
+                {
+                    "id": "kprofiles",
+                    "path": "guides/kprofiles",
+                    "title": "KProfiles Guide",
+                    "icon": "sliders",
+                    "desc": "How to use KProfiles for kernel-level performance tuning."
+                },
+                {
+                    "id": "reset_battery_cycles",
+                    "path": "guides/reset_battery_cycles",
+                    "title": "Reset Battery Cycles",
+                    "icon": "battery",
+                    "desc": "Recalibrate your battery stats after a replacement."
+                },
+                {
+                    "id": "sandboxed_gms",
+                    "path": "guides/sandboxed_gms",
+                    "title": "Sandboxed GMS",
+                    "icon": "box",
+                    "desc": "Install Google Mobile Services safely in a sandbox."
+                },
+                {
+                    "id": "specterm",
+                    "path": "guides/specterm",
+                    "title": "SpecTerm",
+                    "icon": "terminal",
+                    "desc": "Terminal emulator and debugging guide."
+                },
+                {
+                    "id": "ubl_video_guide",
+                    "path": "guides/ubl_video_guide",
+                    "title": "UBL Video Guide",
+                    "icon": "video",
+                    "desc": "Video tutorial for unlocking the bootloader."
+                },
+                {
+                    "id": "xml_lmc8.4",
+                    "path": "guides/xml_lmc8.4",
+                    "title": "LMC 8.4 XML Configs",
+                    "icon": "camera",
+                    "desc": "Additional configurations for the LMC 8.4 GCam."
+                },
+                {
+                    "id": "play_integrity_setup",
+                    "path": "guides/play_integrity_setup",
+                    "title": "Play Integrity Setup",
+                    "icon": "shield-check",
+                    "desc": "Complete setup guide to hide root and pass Play Integrity."
+                }
+            ]
+        },
+        {
+            "id": "troubleshooting",
+            "title": "Troubleshooting",
+            "icon": "alert-triangle",
+            "pages": [
+                {
+                    "id": "bootloop_flashing",
+                    "path": "troubleshooting/bootloop_flashing",
+                    "title": "Bootloop after flashing ROM",
+                    "icon": "alert-circle",
+                    "desc": "Did not wipe or wrong ROM"
+                },
+                {
+                    "id": "no_sim",
+                    "path": "troubleshooting/no_sim",
+                    "title": "No SIM / No Network",
+                    "icon": "alert-circle",
+                    "desc": "Wrong firmware"
+                },
+                {
+                    "id": "cannot_mount_data",
+                    "path": "troubleshooting/cannot_mount_data",
+                    "title": "Cannot mount data",
+                    "icon": "alert-circle",
+                    "desc": "Data encryption"
+                },
+                {
+                    "id": "black_camera",
+                    "path": "troubleshooting/black_camera",
+                    "title": "Black Camera",
+                    "icon": "alert-circle",
+                    "desc": "Incompatible camera app"
+                },
+                {
+                    "id": "fingerprint_broken",
+                    "path": "troubleshooting/fingerprint_broken",
+                    "title": "Fingerprint not working",
+                    "icon": "alert-circle",
+                    "desc": "ROM does not support begonia fingerprint"
+                },
+                {
+                    "id": "overheating",
+                    "path": "troubleshooting/overheating",
+                    "title": "Overheating and Battery Drain",
+                    "icon": "alert-circle",
+                    "desc": "Bad kernel"
+                },
+                {
+                    "id": "magisk_bootloop",
+                    "path": "troubleshooting/magisk_bootloop",
+                    "title": "Bootloop after Magisk Module",
+                    "icon": "alert-circle",
+                    "desc": "Bad module"
+                },
+                {
+                    "id": "stuck_miui_logo",
+                    "path": "troubleshooting/stuck_miui_logo",
+                    "title": "Stuck on MIUI logo",
+                    "icon": "alert-circle",
+                    "desc": "Wrong firmware or dirty flash"
+                },
+                {
+                    "id": "stuck_bootanimation",
+                    "path": "troubleshooting/stuck_bootanimation",
+                    "title": "Stuck on bootanimation for 30+ minutes",
+                    "icon": "alert-circle",
+                    "desc": "Incompatible Gapps or Magisk"
+                },
+                {
+                    "id": "twrp_password",
+                    "path": "troubleshooting/twrp_password",
+                    "title": "TWRP asks for password on data",
+                    "icon": "alert-circle",
+                    "desc": "Encryption"
+                },
+                {
+                    "id": "twrp_error_7",
+                    "path": "troubleshooting/twrp_error_7",
+                    "title": "Error 7 in TWRP when flashing",
+                    "icon": "alert-circle",
+                    "desc": "Wrong device or old TWRP"
+                },
+                {
+                    "id": "volte_broken",
+                    "path": "troubleshooting/volte_broken",
+                    "title": "VoLTE not working",
+                    "icon": "alert-circle",
+                    "desc": "ROM does not have IMS"
+                },
+                {
+                    "id": "bluetooth_lag",
+                    "path": "troubleshooting/bluetooth_lag",
+                    "title": "Bluetooth disconnects / audio lag",
+                    "icon": "alert-circle",
+                    "desc": "Kernel or ROM bug"
+                },
+                {
+                    "id": "gps_not_locking",
+                    "path": "troubleshooting/gps_not_locking",
+                    "title": "GPS not locking",
+                    "icon": "alert-circle",
+                    "desc": "Bad gps.conf"
+                },
+                {
+                    "id": "widevine_l3",
+                    "path": "troubleshooting/widevine_l3",
+                    "title": "Widevine L3 instead of L1",
+                    "icon": "alert-circle",
+                    "desc": "Custom ROM"
+                },
+                {
+                    "id": "otg_not_working",
+                    "path": "troubleshooting/otg_not_working",
+                    "title": "OTG not working",
+                    "icon": "alert-circle",
+                    "desc": "Kernel or ROM"
+                },
+                {
+                    "id": "anx_camera_crashes",
+                    "path": "troubleshooting/anx_camera_crashes",
+                    "title": "ANX Camera crashes",
+                    "icon": "alert-circle",
+                    "desc": "Wrong ANX version"
+                },
+                {
+                    "id": "video_4k_laggy",
+                    "path": "troubleshooting/video_4k_laggy",
+                    "title": "Video recording 4K laggy",
+                    "icon": "alert-circle",
+                    "desc": "Stock AOSP camera limits"
+                },
+                {
+                    "id": "screen_flickering",
+                    "path": "troubleshooting/screen_flickering",
+                    "title": "Screen flickering",
+                    "icon": "alert-circle",
+                    "desc": "90Hz/120Hz force or bad kernel"
+                },
+                {
+                    "id": "high_battery_drain",
+                    "path": "troubleshooting/high_battery_drain",
+                    "title": "High battery drain overnight",
+                    "icon": "alert-circle",
+                    "desc": "Wakelocks"
+                },
+                {
+                    "id": "micro_stutters",
+                    "path": "troubleshooting/micro_stutters",
+                    "title": "Micro stutters and lag",
+                    "icon": "alert-circle",
+                    "desc": "ZRAM or scheduler"
+                },
+                {
+                    "id": "storage_0mb",
+                    "path": "troubleshooting/storage_0mb",
+                    "title": "Storage shows 0MB",
+                    "icon": "alert-circle",
+                    "desc": "Corrupted data partition"
+                },
+                {
+                    "id": "bank_apps_root",
+                    "path": "troubleshooting/bank_apps_root",
+                    "title": "Bank apps detect root",
+                    "icon": "alert-circle",
+                    "desc": "Root detection"
+                },
+                {
+                    "id": "adb_not_detecting",
+                    "path": "troubleshooting/adb_not_detecting",
+                    "title": "ADB not detecting device",
+                    "icon": "alert-circle",
+                    "desc": "Drivers or USB mode"
+                }
+            ]
+        }
+    ]
+}
