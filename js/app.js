@@ -21,6 +21,30 @@ const initApp = async () => {
     try {
         const res = await fetch('structure.json');
         structure = await res.json();
+
+        // Fetch and cache markdown content for all pages
+        const fetchPromises = [];
+        structure.categories.forEach(cat => {
+            cat.pages.forEach(p => {
+                const fetchPromise = fetch(`pages/${p.path}.md`)
+                    .then(res => {
+                        if (res.ok) {
+                            return res.text();
+                        }
+                        return '';
+                    })
+                    .then(text => {
+                        p.content = text;
+                    })
+                    .catch(err => {
+                        console.error(`Failed to load content for ${p.path}`, err);
+                        p.content = '';
+                    });
+                fetchPromises.push(fetchPromise);
+            });
+        });
+        await Promise.all(fetchPromises);
+
     } catch (e) {
         console.error("Failed to load structure.json");
         contentArea.innerHTML = `<div class="alert"><div class="alert-title">Error</div><div class="alert-desc">Failed to load structure.json</div></div>`;
@@ -74,11 +98,11 @@ const initApp = async () => {
             const blockquoteRenderer = (tokenOrString) => {
                 const text = typeof tokenOrString === 'string' ? tokenOrString : (tokenOrString.text || tokenOrString.raw || '');
                 if (text.includes('[!NOTE]')) {
-                    const desc = text.replace(/\\[!NOTE\\]/g, '').trim();
+                    const desc = text.replace(/\[!NOTE\]/g, '').trim();
                     return `<div class="alert"><div class="alert-title"><i data-lucide="info" class="icon-md"></i> Note</div><div class="alert-desc">${desc}</div></div>`;
                 }
                 if (text.includes('[!WARNING]')) {
-                    const desc = text.replace(/\\[!WARNING\\]/g, '').trim();
+                    const desc = text.replace(/\[!WARNING\]/g, '').trim();
                     return `<div class="alert"><div class="alert-title"><i data-lucide="alert-triangle" class="icon-md"></i> Warning</div><div class="alert-desc">${desc}</div></div>`;
                 }
                 
@@ -248,7 +272,11 @@ const initApp = async () => {
 
         structure.categories.forEach(cat => {
             cat.pages.forEach(p => {
-                if (q === '' || p.title.toLowerCase().includes(q) || (p.desc && p.desc.toLowerCase().includes(q))) {
+                const matchTitle = p.title.toLowerCase().includes(q);
+                const matchDesc = p.desc && p.desc.toLowerCase().includes(q);
+                const matchContent = p.content && p.content.toLowerCase().includes(q);
+
+                if (q === '' || matchTitle || matchDesc || matchContent) {
                     results.push({ ...p, categoryTitle: cat.title });
                 }
             });

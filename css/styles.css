@@ -189,6 +189,11 @@ button {
     background-color: hsl(var(--accent));
     color: hsl(var(--foreground));
 }
+.sidebar-link.active {
+    background-color: hsl(var(--accent));
+    color: hsl(var(--foreground));
+    font-weight: 500;
+}
 
 .nav-section {
     margin-top: 16px;
@@ -646,4 +651,30 @@ button {
     text-align: center;
     color: hsl(var(--muted-foreground));
     font-size: 14px;
+}
+
+/* Google Translate Styles */
+.goog-te-gadget {
+    font-size: 0 !important;
+    color: transparent !important;
+}
+.goog-te-gadget .goog-te-combo {
+    margin: 0 !important;
+    padding: 4px 8px;
+    border-radius: var(--radius);
+    border: 1px solid hsl(var(--border));
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+}
+.goog-te-gadget .goog-te-combo:focus {
+    border-color: hsl(var(--muted-foreground));
+}
+.skiptranslate iframe {
+    display: none !important;
+}
+body {
+    top: 0 !important;
 }
