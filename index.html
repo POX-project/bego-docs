@@ -51,6 +51,7 @@
                     </div>
                     
                     <div style="display: flex; align-items: center; gap: 16px;">
+                        <div id="google_translate_element" style="margin-right: 10px;"></div>
                         <div style="font-size: 13px; color: hsl(var(--muted-foreground)); display: flex; align-items: center;">
                             <i data-lucide="eye" class="icon-sm" style="margin-right: 6px;"></i> 
                             <span id="visit-count" style="font-weight: 500; color: hsl(var(--foreground));">0</span>&nbsp; views
@@ -89,6 +90,12 @@
         </div>
     </div>
     
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
